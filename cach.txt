@@ -1,0 +1,82 @@
+
+<div class="container">
+
+    <!-- The Hero Section start's  -->
+
+    <p class="animate__animated   animate__fadeInLeft">An animated element By NAreg</p>
+
+
+    <h2 style="text-align:center"> Gallery</h2>
+
+    <div class="container-fluid  swiper  hero-slider ">
+
+
+        <div class="mySlides swiper-slide"  onclick="ChangeThumb()">
+            <img src="assets/img/view-lighting-device-with-futuristic-design.jpg"style="width:100%">
+        </div>
+
+        <div class="mySlides swiper-slide"  onclick="ChangeThumb()">
+
+            <img src="assets/img/3d-modern-lighting-lamp-design.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides swiper-slide "  onclick="ChangeThumb()">
+
+            <img src="assets/img/3d-modern-lighting-lamp-design(1).jpg"pg" style="width:100%">
+        </div>
+
+        <div class="mySlides swiper-slide" onclick="ChangeThumb()" >
+       
+            <img src="assets/img/view-lighting-device-with-futuristic-design.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides swiper-slide" onclick="ChangeThumb">
+
+            <img src="assets/img/view-lighting-device-with-futuristic-design.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides swiper-slide"  onclick="ChangeThumb()">
+
+            <img src="assets/img/view-lighting-device-with-futuristic-design.jpg"style="width:100%">
+
+        </div>
+
+        <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a> -->
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row-thum img-thumbnail">
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/view-lighting-device-with-futuristic-design.jpg" style="width:100%" onclick="currentSlide(1)"
+                    alt="The Woods">
+            </div>
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/3d-modern-lighting-lamp-design.jpg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Cinque Terre">
+            </div>
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/3d-modern-lighting-lamp-design(1).jpg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Mountains and fjords">
+            </div>
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/view-lighting-device-with-futuristic-design.jpg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Northern Lights">
+            </div>
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/3d-modern-lighting-lamp-design.jpg" style="width:100%" onclick="currentSlide(5)"
+                    alt="Nature and sunrise">
+            </div>
+            <div class="column-thum">
+                <img class="demo cursor" src="assets/img/3d-modern-lighting-lamp-design(1).jpg" style="width:100%" onclick="currentSlide(6)"
+                    alt="Snowy Mountains">
+            </div>
+        </div>
+    </div>
+
+    <!-- The Hero Section end's -->
+
+
+</div>

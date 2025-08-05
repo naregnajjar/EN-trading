@@ -35,3 +35,11 @@ ul li a {
   margin: 0;
 box-shadow:  10px ;
 }
+@media only screen and (max-width: 600px) {
+header{
+  background-color: #dff;
+}
+.logo{
+  display: none;
+}
+}

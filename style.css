@@ -114,19 +114,6 @@ img {
 
 }
 
-/* 
-
-@media only screen and (min-width: 768px)
-{
-.dropdown{
-  display: block;
-}
-}
-@media only screen and (max-width: 600px) {
-
-.dropdown{
-  display: block;
-} */
 
 .dropdown{
   position: relative;
@@ -134,3 +121,16 @@ img {
 }
 
 
+
+
+@media only screen and (max-width: 600px) {
+
+
+navbar .sec-two , navbar .dropdown
+{
+  display: none;
+}
+
+
+
+}

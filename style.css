@@ -8,11 +8,16 @@
 
 }
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family:Smooch Sans, sans-serif;
+}
+
+/* Account for fixed navbar height */
+body {
+  padding-top: 100px; /* ensure content not hidden behind fixed navbar */
 }
 
 ::-webkit-scrollbar{
@@ -38,7 +43,8 @@
   height: 40px;
 }
 
-.btn {
+/* Do not globally override Bootstrap's .btn. Scope custom button styles locally. */
+.form-section .btn {
   border: none;
   background-color: rgb(7, 230, 238);
   width: 3em;
@@ -47,15 +53,19 @@
 
 
 /* start with Navbar */
-navbar {
+.site-navbar {
   background-color: transparent;
   display: flex;
-font-size: large;
+  font-size: large;
   align-items: center;
   justify-content: space-between;
   flex-flow: row nowrap;
   position: fixed;
-  top: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030; /* above carousel */
 }
 
 /* navbar .sec-two  ul li a {
@@ -108,10 +118,15 @@ img {
   vertical-align: middle;
 }
 
-/* .dropdown{
-display: none;
-} */
+
+.site-navbar .dropdown{
+  display: none; /* hidden on desktop, toggled on mobile */
+}
+
+
+
 /* section 2 of the nva ends  */
+
 /* the carousel start's  */
 .carousel
 {
@@ -146,13 +161,7 @@ width: 100vw;
 
 
 @media only screen and (max-width: 600px) {
-
-
-navbar .sec-two , navbar .dropdown
-{
-  display: none;
-}
-
-
-
+  /* On mobile: hide full menu, show dropdown toggle */
+  .site-navbar .sec-two { display: none; }
+  .site-navbar .dropdown { display: block; }
 }

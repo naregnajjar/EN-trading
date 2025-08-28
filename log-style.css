@@ -1,45 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+:root {
+    --pink: #eb2b63;
+    --white: #fff;
+    --gray:#777;
+
+}
+
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-      font-family:Smooch Sans, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:Smooch Sans, sans-serif;
 }
 
-header{
-   height:90px;
-   background-color: aliceblue; 
+/* Account for fixed navbar height */
+body {
+  padding-top: 100px; /* ensure content not hidden behind fixed navbar */
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 
-li{
-      list-style-type: none;    
+.wrk {
+  border: solid red 10px;
+}
+.form-section 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  justify-content: space-between;
+}
+.form-section form input{
+  display: block;
+  width: 100%;
+  margin: 5px 0 ;
+  height: 40px;
 }
 
-ul li a {
-
-  margin: 0.5em;
-  text-decoration: none;
-  border-radius:10px;
-  padding: 3px; 
+/* Do not globally override Bootstrap's .btn. Scope custom button styles locally. */
+.form-section .btn {
+  border: none;
+  background-color: rgb(7, 230, 238);
+  width: 3em;
+  height: 3em;
 }
 
- ul li a:hover {
-    color: #fff;
+
+/* start with Navbar */
+.site-navbar {
+  background-color: transparent;
+  display: flex;
+  font-size: large;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030; /* above carousel */
 }
 
+/* navbar .sec-two  ul li a {
+  color: var(--white);
+} */
+form  input{
+  margin: auto;
+  height: 1.5em;
+background-color: rgba(22 , 00, 205, 0.8);
+  border: none;
+  font: weight 400px; ;
+  color: var(--white);
+}
+form   .btn  {
+  margin: auto;
+  height: 2.2em;
+
+}
 
 .logo {
   max-height: 15vh;
   border-radius: 50%;
   margin: 0;
-box-shadow:  10px ;
+  box-shadow:  10px ;
 }
+
+.sec-two ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.sec-two ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  margin: 0.5em;
+  text-decoration: none;
+  border-radius:10px;
+  padding: 3px;
+}
+
+ul li a:hover {
+    color: #fff;
+}
+
+
+img {
+  vertical-align: middle;
+}
+
+
+.site-navbar .dropdown{
+  display: none; /* hidden on desktop, toggled on mobile */
+}
+
+
+
+/* section 2 of the nva ends  */
+
+/* the carousel start's  */
+.carousel
+{
+  max-width: max-content;
+  max-width: max-content;
+
+z-index: 0;
+width: 100vw;
+}
+
+/* the carousel end's */
+
+
+
+/* brand section  */
+
+.ticker-track{
+  --duration:20s;
+  animation: ticker-scroll var(--duration) linear infinite;
+  will-change: transform;
+}
+@keyframes ticker-scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* scroll one group width */
+}
+@media (prefers-reduced-motion: reduce){
+  .ticker-track{ animation: none; }
+}
+
+/* brand section ends  */
+
+
+
 @media only screen and (max-width: 600px) {
-header{
-  background-color: #dff;
-}
-.logo{
-  display: none;
-}
+  /* On mobile: hide full menu, show dropdown toggle */
+  .site-navbar .sec-two { display: none; }
+  .site-navbar .dropdown { display: block; }
 }
